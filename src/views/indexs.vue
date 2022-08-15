@@ -1,5 +1,8 @@
 <template>
   <div>
+      <div class="indexs">
+          <Header id="0"></Header>
+      </div>
       <div v-show="maskShow" style="position:fixed;top:0;bottom:0;right:0;left:0;background:rgba(0,0,0,.5);z-index:999"></div>
       <div style="position: relative">
         <div class="lbZoom">
@@ -54,7 +57,7 @@
                 width="21px"
                 height="21px"
               />
-              <div @click="zxteaShow = true">资讯老师</div>
+              <div @click="zxteaShow = true;">资讯老师</div>
             </div>
             <div class="title-nr">
               <img
@@ -93,10 +96,10 @@
                 </div>
               </div>
               <div style="display:flex;">
-                <div style="margin:8px 20px 0 0" >
+                <div style="margin:8px 20px 0 0;cursor: pointer;" >
                   <img src="@/assets/index/laba.png" alt="" @click="laba()">
                 </div>
-                <div style="margin-top:8px;">
+                <div style="margin-top:8px;cursor: pointer;">
                   <i class="el-icon-minus" @click="zxteaShow = false"></i>
                 </div>
               </div>
@@ -285,7 +288,7 @@
           </div>
         </div>
       </div>
-    
+    <Footer></Footer>
   </div>
 </template>
 
@@ -296,13 +299,14 @@ export default {
   components: {
     Header,
     Footer
-},
+  },
   data() {
     return {
       lbList: [{'url':'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-655599a5-1b85-4dfb-8f82-a479fc279bdb/7a7ffac1-094e-41be-b971-0e88475060cb.png'}
                 ,{'url':'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-655599a5-1b85-4dfb-8f82-a479fc279bdb/7a7ffac1-094e-41be-b971-0e88475060cb.png'}
                 ,{'url':'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-655599a5-1b85-4dfb-8f82-a479fc279bdb/7a7ffac1-094e-41be-b971-0e88475060cb.png'}],
       src: "https://cube.elemecdn.com/6/94/4d3ea53c084bad6931a56d5158a48jpeg.jpeg",
+      id:0,
       activeIndex: "1",
       activeIndex2: "1",
       height: "",
@@ -330,8 +334,7 @@ export default {
     closeZaix(){
       this.maskShow = false;
     },
-    
-  },
+  }
 };
 </script>
 
@@ -416,6 +419,7 @@ a {
   font-weight: bold;
   color: #527ced;
   line-height: 30px;
+  cursor:pointer;
 }
 
 .zaixAll {
@@ -455,6 +459,7 @@ a {
   display: flex;
   align-items: center;
   padding-bottom: 10px;
+  cursor: pointer;
 }
 .title-nr img {
   margin-right: 5px;
@@ -501,6 +506,7 @@ a {
   top: -5%;
   right: 155px;
   z-index: 666;
+  cursor:pointer;
 }
 .lbs .el-carousel__arrow{
   background-color: transparent !important;

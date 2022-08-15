@@ -1,5 +1,8 @@
 <template>
   <div>
+      <div class="indexs">
+        <Header id="5"></Header>
+      </div>
       <div class="home">
           <img src="@/assets/about/about.png" alt="">
       </div>
@@ -28,12 +31,18 @@
               <div class="qt-wa"></div>
           </div>
       </div>
+      <Footer></Footer>
   </div>
 </template>
 
 <script>
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 export default {
-  
+  components: {
+    Header,
+    Footer,
+  },
 }
 </script>
 
@@ -44,7 +53,7 @@ export default {
 }
 .home>img{
   width: 100%;
-  z-index: -1;
+  z-index: 0;
   position: relative;
 }
 .text{

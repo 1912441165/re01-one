@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <div class="indexs">
+    <!-- <div class="indexs">
         <Header></Header>
-    </div>
+    </div> -->
     <!-- 返回顶部 -->
     <el-backtop :bottom="74" :right="40">
       <div style="width:48px;height:48px;background-color: transparent;">
@@ -10,7 +10,7 @@
       </div>
     </el-backtop>
     <router-view/>
-    <Footer></Footer>
+    <!-- <Footer></Footer> -->
   </div>
 </template>
 
@@ -21,7 +21,7 @@ export default {
   components: {
     Header,
     Footer,
-},
+  },
 }
 
 </script> 

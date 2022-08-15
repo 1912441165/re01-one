@@ -7,6 +7,13 @@ import App from './App.vue'
 Vue.use(ElementUI)
 Vue.config.productionTip = false
 
+router.beforeEach((to,form,next)=>{
+  if(to.meta.title){
+      document.title = to.meta.title
+  }
+  next()
+})
+
 new Vue({
   router,
   render: h => h(App)

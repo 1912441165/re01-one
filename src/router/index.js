@@ -12,29 +12,47 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    component: Indexs
+    component: Indexs,
+    meta: {
+      title:"首页"
+    }
   },
   {
     path: '/home',
     name: 'home',
-    component: HomeView
+    component: HomeView,
+    meta: {
+      title: ""
+    }
   },
   {
     path: '/online',
-    component: Online
+    component: Online,
+    meta: {
+      title: "在线学习"
+    }
   },
   {
     path: '/help',
-    component: Help
+    component: Help,
+    meta: {
+      title: "帮助中心"
+    }
   },
   {
     path: '/service',
-    component: Service
+    component: Service,
+    meta: {
+      title: "服务条款"
+    }
   },
   {
     path: '/about',
     name: 'about',
-    component: About
+    component: About,
+    meta: {
+      title: "关于我们"
+    }
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.

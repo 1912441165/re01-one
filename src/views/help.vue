@@ -1,5 +1,8 @@
 <template>
   <div>
+      <div class="indexs">
+        <Header></Header>
+      </div>
       <div class="home">
           <img src="@/assets/help/help.png" alt="">
       </div>
@@ -9,12 +12,18 @@
         <div style="margin-right:150px;"><img src="@/assets/help/admin-sc.png" alt=""></div>
         <div style="margin-left:150px;"><img src="@/assets/help/xueyu-sc.png" alt=""></div>
       </div>
+      <Footer></Footer>
   </div>
 </template>
 
 <script>
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 export default {
-  
+  components: {
+    Header,
+    Footer,
+  },
 }
 </script>
 
@@ -25,7 +34,7 @@ export default {
 }
 .home>img{
   width: 100%;
-  z-index: -1;
+  z-index: 0;
   position: relative;
 }
 .shouce{

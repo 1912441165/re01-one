@@ -3,7 +3,7 @@
       <div class="footer">
         <div class="footnr">
           <div class="ftnr">
-            <div class="ftnrtitle"><router-link to="/service">服务条款</router-link> \ <router-link to="/help">帮助中心</router-link></div>
+            <div class="ftnrtitle"><router-link to="/service" target="_blank">服务条款</router-link> \ <router-link to="/help" target="_blank">帮助中心</router-link></div>
             <div class="textmgin">学校名称：重庆市渝中区菲斯克职业培训学校</div>
             <div>学校地址：xxxxxxx</div>
           </div>
@@ -31,10 +31,12 @@
 <script>
 export default {
   name: 'Footer',
+  methods:{
+    
+  }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .footer {
   width: 100%;

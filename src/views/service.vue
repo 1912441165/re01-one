@@ -1,5 +1,8 @@
 <template>
   <div>
+    <div class="indexs">
+        <Header id="5"></Header>
+    </div>
     <div class="home">
       <img src="@/assets/help/server.png" alt="" />
     </div>
@@ -33,11 +36,19 @@
         储空间和使用说明等，并保证本服务的正常运<br>
       </div>
     </div>
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
-export default {};
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
+export default {
+  components: {
+    Header,
+    Footer,
+  },
+}
 </script>
 
 <style scoped>
@@ -47,7 +58,7 @@ export default {};
 }
 .home > img {
   width: 100%;
-  z-index: -1;
+  z-index: 0;
   position: relative;
 }
 .text {

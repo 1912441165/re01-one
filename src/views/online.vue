@@ -1,5 +1,8 @@
 <template>
   <div>
+    <div class="indexs">
+        <Header id="1"></Header>
+    </div>
     <div class="home">
       <img src="@/assets/online/online.png" alt="" />
     </div>
@@ -347,21 +350,40 @@
             </div>
         </div>
     </div>
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 export default {
+    components: {
+        Header,
+        Footer,
+    },
     data() {
         return {
-        width: '100px',
-        height: '100px',
+        width: '',
+        height: '',
         };
     },
     mounted() {
-        this.width = document.body.clientWidth - 150 + "px";
-        this.height = ((document.body.clientWidth - 150) * 607) / 1742 + "px";
+        // this.width = document.body.clientWidth - 150 + "px";
+        // this.height = ((document.body.clientWidth - 150) * 607) / 1742 + "px";
+        // console.log(this.width,'width',this.height,'height')
     },
+    comments:{
+        width(){
+            return document.body.clientWidth - 150 + "px";
+        },
+        height(){
+            return ((document.body.clientWidth - 150) * 607) / 1742 + "px";
+        }
+    },
+    watch:{
+
+    }
 };
 </script>
 
@@ -372,7 +394,7 @@ export default {
 }
 .home > img {
   width: 100%;
-  z-index: -1;
+  z-index: 0;
   position: relative;
 }
 .kec{
@@ -386,7 +408,7 @@ export default {
 }
 .kec-b{
     width: 22%;
-    height: 100%;
+    /* height: 100%; */
     border: 2px solid #436FEC;
     box-sizing: border-box;
 }
