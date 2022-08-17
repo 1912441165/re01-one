@@ -21,6 +21,7 @@
     <router-link to="/about" :style="id == 5 ? { color: '#749AEB' } : ''">
       <div class="nav-item">关于我们</div>
     </router-link>
+    <!-- min -->
     <div
       class="nav-item navMore"
       style="position: relative; margin-top: 9px; cursor: pointer"
@@ -43,7 +44,7 @@
             color: #fff;
           "
         >
-          <router-link to="/">免费试用</router-link>
+          <router-link to="">免费试用</router-link>
         </div>
         <div
           style="
@@ -54,14 +55,15 @@
             background-color: #fff;
           "
         >
-          <router-link to="/" style="color: #5f85ef">快速登录</router-link>
+          <router-link to="" style="color: #5f85ef">快速登录</router-link>
         </div>
       </div>
     </div>
+    <!-- max -->
     <router-link to="">
       <div class="nav-item hidd" style="color: #d10c0d">023-12345678</div>
     </router-link>
-    <router-link to="/">
+    <router-link to="">
       <div
         class="nav-item hidd"
         style="
@@ -74,7 +76,7 @@
         免费试用
       </div>
     </router-link>
-    <router-link to="/">
+    <router-link to="">
       <div
         class="nav-item hidd"
         style="

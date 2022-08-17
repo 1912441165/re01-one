@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="indexs">
-        <Header id="5"></Header>
+        <Header></Header>
     </div>
     <div class="home">
       <img src="@/assets/help/server.png" alt="" />
@@ -48,6 +48,9 @@ export default {
     Header,
     Footer,
   },
+  mounted(){
+    window.scroll(0, 0); 
+  }
 }
 </script>
 

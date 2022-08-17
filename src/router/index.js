@@ -51,7 +51,7 @@ const routes = [
     name: 'about',
     component: About,
     meta: {
-      title: "关于我们"
+      title: ""
     }
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
@@ -61,6 +61,7 @@ const routes = [
 ]
 
 const router = new VueRouter({
+  mode: "hash",
   routes
 })
 
