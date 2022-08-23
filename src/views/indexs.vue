@@ -185,7 +185,7 @@
           </div>
       </div>
       <div class="bodys">
-        <div class="hyal">行业案例</div>
+        <div class="hyal" id="hyal" @click="hyalBtn()" ref="hyal">行业案例</div>
         <div class="lbs">
           <el-carousel trigger="click" :autoplay="true" :height="heights" indicator-position="none" arrow="always">
             <el-carousel-item v-for="item in 3" :key="item">
@@ -200,7 +200,7 @@
         </div>
       </div>
       <div style="position:relative;">
-          <div class="teacher">
+          <div class="teacher" id="jsjj" ref="jsjj">
             <img src="@/assets/index/teacher.png" alt="" :width="width" :height="heightTea">
           </div>
           <div class="teaNr">
@@ -221,7 +221,7 @@
                   <div class="btn">课程名称文案文案</div>
                   <div class="btn btnlast">更多课程</div>
                 </div>
-                <div class="djcx">点击查询</div>
+                <div class="djcx" @click="djcxBtn()">点击查询</div>
               </div>
               <div class="js jsb">
                 <div class="jsleft">
@@ -239,13 +239,13 @@
                   <div class="btn">课程名称文案文案</div>
                   <div class="btn btnlast">更多课程</div>
                 </div>
-                <div class="mfsy">免费试用</div>
+                <div class="mfsy" @click="mfsyBtn()">免费试用</div>
               </div>
             </div>
           </div>
       </div>
       <div class="jiejue">
-        <div class="jijuTitle">
+        <div class="jijuTitle" id="jjfa" ref="jjfa">
           解决方案
         </div>
         <div class="qiyenr">
@@ -323,6 +323,9 @@ export default {
     this.height = ((document.body.clientWidth - 150) * 892) / 1838 + "px";
     this.heights = ((document.body.clientWidth - 150) * 727) / 1823 + "px";
     this.heightTea = ((document.body.clientWidth - 150) * 723) / 1818 + "px";
+    console.log('行业案例距离顶部高度', this.$refs.hyal.getBoundingClientRect().top)
+    console.log('讲师简介距离顶部高度', this.$refs.jsjj.getBoundingClientRect().top)
+    console.log('解决方案距离顶部高度', this.$refs.jjfa.getBoundingClientRect().top)
   },
   methods: {
     laba(){
@@ -334,6 +337,15 @@ export default {
     closeZaix(){
       this.maskShow = false;
     },
+    hyalBtn(){
+      console.log("点击行业案例");
+    },
+    djcxBtn(){
+      console.log("点击了点击查询")
+    },
+    mfsyBtn(){
+      console.log("点击免费试用")
+    }
   }
 };
 </script>
@@ -592,6 +604,7 @@ a {
   position: absolute;
   bottom: 5%;
   left: 30%;
+  cursor: pointer;
 }
 .mfsy{
   background-color: #4E79EE;
@@ -602,6 +615,7 @@ a {
   position: absolute;
   bottom: 5%;
   right: 30%;
+  cursor:pointer;
 }
 .jijuTitle{
   margin: 120px 0 100px 0;
@@ -686,7 +700,7 @@ a {
   border-radius: 0px !important;
 }
 /* 0-1400px */
-@media screen and (max-width: 1400px) {  
+@media screen and (max-width: 1600px) {  
   .teaNr {
     position: absolute;
     width: 80%;
@@ -714,6 +728,14 @@ a {
   }
   .jjimg{
     margin-top: 90px; 
+  }
+}
+@media (min-width:1400px) and (max-width: 1600px) {
+  .imgMax{
+    display: block;
+  }
+  .touqitas{
+    margin-top: 80px;
   }
 }
 /* 大于1400px */

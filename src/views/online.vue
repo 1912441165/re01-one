@@ -366,12 +366,14 @@ export default {
         return {
         width: '',
         height: '',
+        id: 1,
         };
     },
     mounted() {
         // this.width = document.body.clientWidth - 150 + "px";
         // this.height = ((document.body.clientWidth - 150) * 607) / 1742 + "px";
         // console.log(this.width,'width',this.height,'height')
+        
     },
     comments:{
         width(){

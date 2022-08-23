@@ -4,7 +4,7 @@
         <Header></Header>
     </div> -->
     <!-- 返回顶部 -->
-    <el-backtop :bottom="74" :right="40">
+    <el-backtop :bottom="74" :right="13.5">
       <div style="width:48px;height:48px;background-color: transparent;">
         <img src="@/assets/index/top.png" alt="">
       </div>

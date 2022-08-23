@@ -10,13 +10,13 @@
       <div class="nav-item">在线学习</div>
     </router-link>
     <router-link to="" :style="id == 2 ? { color: '#749AEB' } : ''">
-      <div class="nav-item">解决方案</div>
+      <div class="nav-item" @click="goAnchor('#jjfa')">解决方案</div>
     </router-link>
     <router-link to="" :style="id == 3 ? { color: '#749AEB' } : ''">
-      <div class="nav-item">行业案例</div>
+      <div class="nav-item" @click="goAnchor('#hyal')">行业案例</div>
     </router-link>
     <router-link to="" :style="id == 4 ? { color: '#749AEB' } : ''">
-      <div class="nav-item">讲师简介</div>
+      <div class="nav-item" @click="goAnchor('#jsjj')">讲师简介</div>
     </router-link>
     <router-link to="/about" :style="id == 5 ? { color: '#749AEB' } : ''">
       <div class="nav-item">关于我们</div>
@@ -111,6 +111,11 @@ export default {
         this.navShow = false;
         this.time--;
       }
+    },
+    goAnchor(selector) {/*参数selector是id选择器（#anchor14）*/
+      document.querySelector(selector).scrollIntoView({
+        behavior: "smooth"
+      });
     },
   },
 };
