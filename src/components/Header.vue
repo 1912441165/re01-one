@@ -1,6 +1,7 @@
 <template>
   <div class="nav">
-    <div class="nav-item">
+    <div class="gg">您身边的智能培训云平台，一站式解决培训考试难题</div>
+    <div class="nav-logo">
       <img src="@/assets/index/indexa.png" alt="" />
     </div>
     <router-link to="/" :style="id == 0 ? { color: '#749AEB' } : ''">
@@ -21,6 +22,7 @@
     <router-link to="/about" :style="id == 5 ? { color: '#749AEB' } : ''">
       <div class="nav-item">关于我们</div>
     </router-link>
+    <div></div> <div></div> <div></div>
     <!-- min -->
     <div
       class="nav-item navMore"
@@ -51,6 +53,7 @@
             padding: 4px 0;
             border-radius: 31px;
             color: #5f85ef;
+            position: relative;
             border: 1px solid #85a5f2;
             background-color: #fff;
           "
@@ -69,6 +72,9 @@
         style="
           background-color: #4d77ed;
           padding: 5px 0;
+          height: 25px;
+          position: relative;
+          top: -15px;
           border-radius: 31px;
           color: #fff;
         "
@@ -82,6 +88,9 @@
         style="
           padding: 4px 0;
           border-radius: 31px;
+          height: 25px;
+          position: relative;
+          top: -15px;
           color: #5f85ef;
           border: 1px solid #85a5f2;
         "
@@ -147,15 +156,21 @@ export default {
 }
 .nav {
   margin: 40px 0;
+  position: relative;
   width: 100%;
-  height: 80px;
+  height: 50px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+  background-color: #ecf2fe;
 }
 .nav-item {
   width: 104px;
-  font-weight: bold;
+  height: 50px;
+  position: relative;
+  left: -80px;
 }
+.nav-logo{position: relative;left: -30px;top:-30px;width: 130px;height: 80px;background-color: #fff;}
+.gg{width: 25%;height: 50px;position: absolute;line-height: 50px; left: 130px;top: -50px;font-size: 18px;color: #4684f1;}
 </style>

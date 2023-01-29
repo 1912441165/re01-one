@@ -1,8 +1,9 @@
 <template>
   <div>
-      <div class="indexs">
-          <Header id="0"></Header>
-      </div>
+    <div class="indexs">
+
+      <Header id="0"></Header>
+    </div>
       <div v-show="maskShow" style="position:fixed;top:0;bottom:0;right:0;left:0;background:rgba(0,0,0,.5);z-index:999"></div>
       <div style="position: relative">
         <div class="lbZoom">
@@ -152,7 +153,7 @@
         </div>
       </div>
       <div class="nanti">
-          <div class="nt-head">企业面临的培训难题（痛点介绍）</div>
+          <div class="nt-head">企业面临的培训难题</div>
           <div class="nt-nr">
             <div class="wenan">
               <div>
@@ -268,12 +269,12 @@
             <img src="@/assets/index/fanan.png" alt="" width="600px" height="407px">
           </div>
         </div>
-        <div class="qiyenr" style="margin-top:130px">
+        <div class="qiyenr" style="margin-top:50px">
           <div class="jjimg">
             <img src="@/assets/index/fanans.png" alt="">
           </div>
           <div class="qynr jjer">
-            <div class="jijutou" style="margin-top:115px;">企业内训及考试解决方案</div>
+            <div class="jijutou" style="margin-top:55px;">企业内训及考试解决方案</div>
             <div class="jijutext">多种录题方式，支持添加试题分类、难度、标签等属性</div>
             <div class="jijutext">支持多种组卷模式，随机组卷每个学员不同试卷，杜绝相互抄袭</div>
             <div class="jijutext">考前人脸身份核验，考中随机拍照，切页面和离开考试智能监测</div>
@@ -281,7 +282,7 @@
             <div class="jijutext">多维度、多角度分析考试结果，掌握部门、学员考试情况</div>
           </div>
           <div class="qynr jjer">
-            <div class="jijutou" style="margin-top:180px;">企业内训及考试解决方案</div>
+            <div class="jijutou" >企业内训及考试解决方案</div>
             <div class="jijutext">可添加子管理员参与系统管理，满足多管理者分工合作的管理需求</div>
             <div class="jijutext">人性化组织管理，支持人员信息导入及导出，解决数据迁移问题</div>
             <div class="jijutext">人员信息字段支持自定义，满足组织内部特殊字段需求</div>
@@ -362,6 +363,7 @@ a {
   padding: 40px 75px;
   box-sizing: border-box;
 } */
+
 .nav {
   margin: 40px 0;
   width: 100%;
@@ -400,7 +402,7 @@ a {
 .zixun {
   position: absolute;
   top: calc(50% + 100px);
-  right: 155px;
+  right: 78px;
   z-index: 998;
 }
 .zx-img {
@@ -418,6 +420,7 @@ a {
   width: 150px;
   height: 376px;
   margin-top: -37.5px;
+  
   background-color: #547fee;
   border-radius: 15px;
 }
@@ -539,7 +542,7 @@ a {
 .teaNr{
   position: absolute;
   width: 100%;
-  height: 70%; 
+  height: 80%; 
   bottom: 0;
 }
 .jiangshi{
@@ -560,9 +563,13 @@ a {
   justify-content: space-between;
 }
 .leftimg{
-  width: 132px;
-  height: 172px;
+  width: 360px;
+  height: 280px;
   margin-right: 40px;
+}
+.leftimg img{
+  width: 100%;
+  height: 100%;
 }
 .leftjj{
   text-align: left;
@@ -596,9 +603,11 @@ a {
   color: #fff;
 }
 .djcx{
-  background-color: #4E79EE;
+  background-color: #fff;
+  border-radius: 20px;
   font-size: 25px;
-  color: #fff;
+  font-weight: 600;
+  color: #4684f1;
   width: 25%;
   padding: 10px;
   position: absolute;
@@ -607,9 +616,11 @@ a {
   cursor: pointer;
 }
 .mfsy{
-  background-color: #4E79EE;
+  background-color: #fff;
   font-size: 25px;
-  color: #fff;
+  font-weight: 600;
+  border-radius: 20px;
+  color: #4684f1;
   width: 25%;
   padding: 10px;
   position: absolute;
@@ -618,9 +629,9 @@ a {
   cursor:pointer;
 }
 .jijuTitle{
-  margin: 120px 0 100px 0;
+  margin: 80px 0 0 0;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 40px;
 }
 .qiyenr{
   display: flex;
