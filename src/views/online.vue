@@ -267,7 +267,7 @@
     <div class="kec" style="margin-bottom:190px" :style="{width: width,height: height}">
         <div class="kec-a">
             <div class="a-top">
-                <div class="top-title">精品课程</div>
+                <div class="top-title">精品课程</div>  
                 <div class="top-more">更多</div>
             </div>
             <div class="a-dix">

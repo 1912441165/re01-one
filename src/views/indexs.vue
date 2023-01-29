@@ -7,11 +7,11 @@
       <div v-show="maskShow" style="position:fixed;top:0;bottom:0;right:0;left:0;background:rgba(0,0,0,.5);z-index:999"></div>
       <div style="position: relative">
         <div class="lbZoom">
-          <el-carousel trigger="click" :interval="3000" :autoplay="true" :height="height">
+          <el-carousel trigger="click" :interval="3000" :autoplay="true" :height="elCarouselHeight">
             <el-carousel-item v-for="(item,index) in lbList" :key="index">
               <img
                 :width="width"
-                :height="height"
+                :height="elCarouselHeight"
                 :src= 'lbList[index].url'
                 alt=""
               />
@@ -152,54 +152,6 @@
             </div>
         </div>
       </div>
-      <div class="nanti">
-          <div class="nt-head">企业面临的培训难题</div>
-          <div class="nt-nr">
-            <div class="wenan">
-              <div>
-                <img src="@/assets/index/nt-a.png" alt="">
-              </div>
-              <div class="wenanTit">文案文案文案</div>
-              <div class="wenannr">文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案</div>
-            </div>
-            <div class="wenan">
-              <div>
-                <img src="@/assets/index/nt-b.png" alt="">
-              </div>
-              <div class="wenanTit">文案文案文案</div>
-              <div class="wenannr">文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案</div>
-            </div>
-            <div class="wenan">
-              <div>
-                <img src="@/assets/index/nt-c.png" alt="">
-              </div>
-              <div class="wenanTit">文案文案文案</div>
-              <div class="wenannr">文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案</div>
-            </div>
-            <div class="wenan">
-              <div>
-                <img src="@/assets/index/nt-d.png" alt="">
-              </div>
-              <div class="wenanTit">文案文案文案</div>
-              <div class="wenannr">文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案</div>
-            </div>
-          </div>
-      </div>
-      <div class="bodys">
-        <div class="hyal" id="hyal" @click="hyalBtn()" ref="hyal">行业案例</div>
-        <div class="lbs">
-          <el-carousel trigger="click" :autoplay="true" :height="heights" indicator-position="none" arrow="always">
-            <el-carousel-item v-for="item in 3" :key="item">
-              <img
-                :width="width"
-                :height="heights"
-                src="@/assets/index/lbs.png"
-                alt=""
-              />
-            </el-carousel-item>
-          </el-carousel>
-        </div>
-      </div>
       <div style="position:relative;">
           <div class="teacher" id="jsjj" ref="jsjj">
             <img src="@/assets/index/teacher.png" alt="" :width="width" :height="heightTea">
@@ -245,6 +197,41 @@
             </div>
           </div>
       </div>
+      <div class="nanti">
+          <div class="nt-head">企业面临的培训难题</div>
+          <div class="nt-nr">
+            <div class="wenan">
+              <div>
+                <img src="@/assets/index/nt-a.png" alt="">
+              </div>
+              <div class="wenanTit">文案文案文案</div>
+              <div class="wenannr">文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案</div>
+            </div>
+            <div class="wenan">
+              <div>
+                <img src="@/assets/index/nt-b.png" alt="">
+              </div>
+              <div class="wenanTit">文案文案文案</div>
+              <div class="wenannr">文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案</div>
+            </div>
+            <div class="wenan">
+              <div>
+                <img src="@/assets/index/nt-c.png" alt="">
+              </div>
+              <div class="wenanTit">文案文案文案</div>
+              <div class="wenannr">文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案</div>
+            </div>
+            <div class="wenan">
+              <div>
+                <img src="@/assets/index/nt-d.png" alt="">
+              </div>
+              <div class="wenanTit">文案文案文案</div>
+              <div class="wenannr">文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案</div>
+            </div>
+          </div>
+      </div>
+     
+      
       <div class="jiejue">
         <div class="jijuTitle" id="jjfa" ref="jjfa">
           解决方案
@@ -269,7 +256,7 @@
             <img src="@/assets/index/fanan.png" alt="" width="600px" height="407px">
           </div>
         </div>
-        <div class="qiyenr" style="margin-top:50px">
+        <div class="qiyenr" >
           <div class="jjimg">
             <img src="@/assets/index/fanans.png" alt="">
           </div>
@@ -287,6 +274,21 @@
             <div class="jijutext">人性化组织管理，支持人员信息导入及导出，解决数据迁移问题</div>
             <div class="jijutext">人员信息字段支持自定义，满足组织内部特殊字段需求</div>
           </div>
+        </div>
+      </div>
+      <div class="bodys">
+        <div class="hyal" id="hyal" @click="hyalBtn()" ref="hyal">行业案例</div>
+        <div class="lbs">
+          <el-carousel trigger="click" :autoplay="true" :height="heights" indicator-position="none" arrow="always">
+            <el-carousel-item v-for="item in 3" :key="item">
+              <img
+                :width="width"
+                :height="heights"
+                src="@/assets/index/lbs.png"
+                alt=""
+              />
+            </el-carousel-item>
+          </el-carousel>
         </div>
       </div>
     <Footer></Footer>
@@ -314,6 +316,7 @@ export default {
       heights: "",
       heightTea: "",
       width: "",
+      elCarouselHeight: null,
       maskShow:false,
       zxteaShow:false,
       textarea:'',
@@ -324,6 +327,8 @@ export default {
     this.height = ((document.body.clientWidth - 150) * 892) / 1838 + "px";
     this.heights = ((document.body.clientWidth - 150) * 727) / 1823 + "px";
     this.heightTea = ((document.body.clientWidth - 150) * 723) / 1818 + "px";
+    this.elCarouselHeight = ((document.body.clientWidth - 150) * 810) / 1818 + "px";
+    console.log('第一个轮播图高度', elCarouselHeight)
     console.log('行业案例距离顶部高度', this.$refs.hyal.getBoundingClientRect().top)
     console.log('讲师简介距离顶部高度', this.$refs.jsjj.getBoundingClientRect().top)
     console.log('解决方案距离顶部高度', this.$refs.jjfa.getBoundingClientRect().top)
@@ -401,7 +406,8 @@ a {
 }
 .zixun {
   position: absolute;
-  top: calc(50% + 100px);
+  /* top: calc(50% + 100px); */
+  top: 10px;
   right: 78px;
   z-index: 998;
 }
@@ -640,17 +646,20 @@ a {
 }
 .qynr{
   text-align: left;
+  position: relative;
+  top: -55px;
 }
+.imgMax{position: relative;top: -100px;}
 .jijutou{
   margin-bottom: 40px;
   font-weight: bold;
   font-size: 20px;
 }
 .touqita{
-  margin-top: 78px;
+  margin-top: 28px;
 }
 .touqitas{
-  margin-top: 80px;
+  margin-top: 40px;
 }
 .jijutext{
   color: #CBCACA;

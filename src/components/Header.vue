@@ -155,7 +155,7 @@ export default {
   margin: 20px;
 }
 .nav {
-  margin: 40px 0;
+  margin: 11px 0;
   position: relative;
   width: 100%;
   height: 50px;
@@ -172,5 +172,5 @@ export default {
   left: -80px;
 }
 .nav-logo{position: relative;left: -30px;top:-30px;width: 130px;height: 80px;background-color: #fff;}
-.gg{width: 25%;height: 50px;position: absolute;line-height: 50px; left: 130px;top: -50px;font-size: 18px;color: #4684f1;}
+.gg{width: 33%;height: 50px;position: absolute;line-height: 50px; left: 130px;top: -50px;font-size: 18px;color: #4684f1;}
 </style>
